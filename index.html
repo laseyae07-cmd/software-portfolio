@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Laseya Ekanayake | Software Portfolio</title>
+
+    <meta name="description"
+          content="Software portfolio of Laseya Ekanayake, a Software Engineering Higher Diploma student and aspiring software developer intern." />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="background-animation">
+        <span class="blob blob-one"></span>
+        <span class="blob blob-two"></span>
+        <span class="blob blob-three"></span>
+    </div>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="logo" href="#home">Portfolio<span>.</span></a>
+
+            <button class="menu-toggle" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <section id="home" class="hero section">
+            <div class="hero-left reveal">
+                <p class="eyebrow">Software Engineering Student</p>
+
+                <h1>
+                    Hi, I’m <span>Laseya Ekanayake</span>
+                </h1>
+
+                <p class="typing-line">
+                    <span id="typing-text"></span>
+                </p>
+
+                <p class="hero-text">
+                    An aspiring software developer intern interested in web development,
+                    mobile application development, database systems, and practical software solutions.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn primary" href="#projects">View My Projects</a>
+                    <a class="btn secondary" href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">
+                        Visit GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right reveal">
+                <div class="profile-card floating">
+                    <div class="profile-photo-wrap">
+                        <img src="images/profile.jpg" alt="Laseya Ekanayake" class="profile-photo">
+                    </div>
+                    <h2>Laseya Ekanayake</h2>
+                    <p>Aspiring Software Developer Intern</p>
+
+                    <div class="profile-tags">
+                        <span>Java</span>
+                        <span>C++</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <div class="section-title reveal">
+                <p class="eyebrow">About Me</p>
+                <h2>Building my path in software development</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card reveal">
+                    <p>
+                        I am a Software Engineering Higher Diploma student with academic project
+                        experience in programming, system analysis, web development, mobile application
+                        development, and database fundamentals.
+                    </p>
+
+                    <p>
+                        I enjoy learning new technologies and creating simple, useful software solutions.
+                        I am currently looking for software development internship opportunities where I
+                        can improve my technical skills and gain real industry experience.
+                    </p>
+                </div>
+
+                <div class="stats-grid reveal">
+                    <div class="stat-card">
+                        <h3>3+</h3>
+                        <p>GitHub Projects</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>5+</h3>
+                        <p>Academic Projects</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>100%</h3>
+                        <p>Ready to Learn</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <div class="section-title reveal">
+                <p class="eyebrow">Technical Skills</p>
+                <h2>Technologies and tools I work with</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-icon">💻</div>
+                    <h3>Programming</h3>
+                    <p>C++, Java, Basic Python</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, PHP</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <p>MySQL, SQLite, SQL Basics</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon">📱</div>
+                    <h3>Mobile Development</h3>
+                    <p>Android Studio, Java, XML, SQLite</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon">🧠</div>
+                    <h3>Software Concepts</h3>
+                    <p>OOP, SDLC, System Analysis & Design</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Tools</h3>
+                    <p>GitHub, VS Code, Android Studio, XAMPP, draw.io</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <div class="section-title reveal">
+                <p class="eyebrow">My Work</p>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <div class="project-image android">
+                        <span>Android App</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>PrintXpress Mobile App</h3>
+
+                        <p>
+                            A native Android mobile application for a digital printing service.
+                            It allows users to browse print products, place custom orders,
+                            manage profiles, and store data using SQLite.
+                        </p>
+
+                        <div class="tech-list">
+                            <span>Java</span>
+                            <span>XML</span>
+                            <span>SQLite</span>
+                            <span>Android Studio</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/laseyae07-cmd/printxpress-mobile-app" target="_blank" rel="noopener">
+                            View Project →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-image web">
+                        <span>Web System</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>GlobeTrek Adventures Website</h3>
+
+                        <p>
+                            A PHP and MySQL travel management website with travel packages,
+                            bookings, custom travel plans, transport services, and role-based dashboards.
+                        </p>
+
+                        <div class="tech-list">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/laseyae07-cmd/globetrek-adventures-website" target="_blank" rel="noopener">
+                            View Project →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-image cpp">
+                        <span>C++ System</span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3>Genius Books Management System</h3>
+
+                        <p>
+                            A console-based C++ bookshop management system with login,
+                            book inventory management, sales recording, input validation,
+                            and file handling.
+                        </p>
+
+                        <div class="tech-list">
+                            <span>C++</span>
+                            <span>File Handling</span>
+                            <span>Console App</span>
+                        </div>
+
+                        <a class="project-link" href="https://github.com/laseyae07-cmd/genius-books-management-system" target="_blank" rel="noopener">
+                            View Project →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- WHAT I CAN DO -->
+        <section class="section">
+            <div class="section-title reveal">
+                <p class="eyebrow">Internship Focus</p>
+                <h2>What I can contribute as an intern</h2>
+            </div>
+
+            <div class="focus-grid">
+                <div class="focus-card reveal">
+                    <h3>Frontend Development</h3>
+                    <p>
+                        Creating clean and responsive web pages using HTML, CSS, and JavaScript.
+                    </p>
+                </div>
+
+                <div class="focus-card reveal">
+                    <h3>Backend Basics</h3>
+                    <p>
+                        Working with PHP, MySQL, database connections, forms, and simple dashboards.
+                    </p>
+                </div>
+
+                <div class="focus-card reveal">
+                    <h3>Mobile App Development</h3>
+                    <p>
+                        Developing Android applications using Java, XML layouts, and SQLite databases.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section contact-section">
+            <div class="contact-card reveal">
+                <p class="eyebrow">Contact Me</p>
+                <h2>Let’s connect</h2>
+
+                <p>
+                    I am currently looking for software development internship opportunities
+                    where I can learn, contribute, and grow as a developer.
+                </p>
+
+                <p class="email-text">Email: laseyae07@gmail.com</p>
+
+                <div class="contact-links">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=laseyae07@gmail.com&su=Internship%20Opportunity%20Inquiry" target="_blank" rel="noopener">
+                        Email Me
+                    </a>
+                    <a href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/laseya-ekanayake-956b25394/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Laseya Ekanayake. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        ↑
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
