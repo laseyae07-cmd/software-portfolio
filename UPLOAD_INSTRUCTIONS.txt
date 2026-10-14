@@ -1,0 +1,26 @@
+How to upload this portfolio to GitHub:
+
+1. Create a new repository named: software-portfolio
+2. Keep it Public.
+3. Do not add a README while creating it because this folder already has one.
+4. Extract this ZIP file.
+5. Upload all extracted files to the repository:
+   - index.html
+   - style.css
+   - script.js
+   - README.md
+   - assets folder
+   - UPLOAD_INSTRUCTIONS.txt
+6. Click Commit changes.
+
+How to publish:
+
+1. Open the repository.
+2. Go to Settings.
+3. Click Pages.
+4. Source: Deploy from a branch.
+5. Branch: main, folder: /root.
+6. Click Save.
+
+Your portfolio link will look like:
+https://laseyae07-cmd.github.io/software-portfolio/
