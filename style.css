@@ -635,3 +635,251 @@ footer {
     color: var(--accent-three);
     font-weight: 700;
 }
+/* ===== Portfolio update additions ===== */
+
+/* Keyboard focus */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent-three);
+    outline-offset: 3px;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, var(--accent), var(--accent-two), var(--accent-three));
+}
+
+/* Active nav link */
+.nav-links a.active {
+    color: var(--text);
+}
+
+    .nav-links a.active::after {
+        width: 100%;
+    }
+
+/* Availability badge */
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border-radius: 999px;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+    background: rgba(74, 222, 128, 0.08);
+    color: #bbf7d0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+    .availability .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #4ade80;
+        animation: pulse 2s infinite;
+    }
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(74, 222, 128, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+}
+
+/* Project filters */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.filter-btn {
+    padding: 9px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--muted);
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .filter-btn:hover {
+        color: var(--text);
+        border-color: rgba(236, 72, 153, 0.5);
+    }
+
+    .filter-btn.active {
+        color: white;
+        border-color: transparent;
+        background: linear-gradient(90deg, var(--accent), var(--accent-two));
+    }
+
+.project-card.hide {
+    display: none;
+}
+
+/* New project banners */
+.project-image.pawtrace {
+    background: linear-gradient(135deg, #0d9488, #8b5cf6);
+}
+
+.project-image.kmc {
+    background: linear-gradient(135deg, #2563eb, #a855f7);
+}
+
+.project-image.lifelink {
+    background: linear-gradient(135deg, #dc2626, #ec4899);
+}
+
+.project-role {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--accent-three);
+}
+
+/* QA section */
+.qa-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.qa-steps {
+    display: grid;
+    gap: 16px;
+}
+
+.qa-step {
+    padding: 22px 26px;
+}
+
+    .qa-step h3 {
+        margin-bottom: 6px;
+        font-size: 18px;
+    }
+
+    .qa-step p {
+        color: var(--muted);
+        font-size: 15px;
+    }
+
+.qa-sample {
+    padding: 26px;
+}
+
+    .qa-sample h3 {
+        margin-bottom: 6px;
+    }
+
+    .qa-sample > p {
+        color: var(--muted);
+        margin-bottom: 18px;
+        font-size: 15px;
+    }
+
+.table-wrap {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 560px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--accent-three);
+    font-size: 13px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+td {
+    color: var(--muted);
+}
+
+    td:first-child {
+        color: var(--text);
+        font-weight: 800;
+        white-space: nowrap;
+    }
+
+.bug-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+    .bug-flow span {
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .bug-flow i {
+        color: var(--accent-two);
+        font-style: normal;
+    }
+
+/* Extra responsive rules */
+@media (max-width: 900px) {
+    .qa-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
