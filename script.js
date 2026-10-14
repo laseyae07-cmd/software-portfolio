@@ -1,6 +1,8 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const backToTop = document.querySelector("#backToTop");
+const progressBar = document.querySelector("#scrollProgress");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Mobile menu
 menuToggle.addEventListener("click", () => {
@@ -18,7 +20,8 @@ const typingText = document.querySelector("#typing-text");
 
 const phrases = [
     "Aspiring Software Developer Intern",
-    "Web Development Enthusiast",
+    "Aspiring QA Intern",
+    "Full-Stack Web Developer in the Making",
     "Android App Development Learner",
     "Passionate About Building Real Projects"
 ];
@@ -54,7 +57,11 @@ function typeEffect() {
     setTimeout(typeEffect, speed);
 }
 
-typeEffect();
+if (prefersReducedMotion) {
+    typingText.textContent = phrases[0];
+} else {
+    typeEffect();
+}
 
 // Scroll reveal animation
 const revealElements = document.querySelectorAll(".reveal");
@@ -74,9 +81,13 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-// Back to top button
+// Scroll progress bar and back to top button
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + "%";
+
+    if (scrollTop > 500) {
         backToTop.classList.add("show");
     } else {
         backToTop.classList.remove("show");
@@ -86,6 +97,81 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: prefersReducedMotion ? "auto" : "smooth"
     });
 });
+
+// Highlight the nav link of the section on screen
+const sections = document.querySelectorAll("main section[id]");
+const navAnchors = document.querySelectorAll(".nav-links a");
+
+const sectionObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                navAnchors.forEach((a) => {
+                    a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id);
+                });
+            }
+        });
+    },
+    { rootMargin: "-45% 0px -50% 0px" }
+);
+
+sections.forEach((section) => sectionObserver.observe(section));
+
+// Count-up numbers in the About stats
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            const el = entry.target;
+            const target = Number(el.dataset.target);
+
+            if (prefersReducedMotion) {
+                el.textContent = target;
+            } else {
+                let current = 0;
+                const step = Math.max(1, Math.ceil(target / 20));
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    el.textContent = current;
+                }, 60);
+            }
+
+            observer.unobserve(el);
+        });
+    },
+    { threshold: 0.6 }
+);
+
+counters.forEach((counter) => counterObserver.observe(counter));
+
+// Project filters
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        button.classList.add("active");
+
+        projectCards.forEach((card) => {
+            const show = filter === "all" || card.dataset.category === filter;
+            card.classList.toggle("hide", !show);
+            if (show) card.classList.add("active");
+        });
+    });
+});
+
+// Footer year
+document.querySelector("#year").textContent = new Date().getFullYear();
