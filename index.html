@@ -7,12 +7,18 @@
     <title>Laseya Ekanayake | Software Portfolio</title>
 
     <meta name="description"
-          content="Software portfolio of Laseya Ekanayake, a Software Engineering Higher Diploma student and aspiring software developer intern." />
+          content="Portfolio of Laseya Ekanayake, a Software Engineering undergraduate seeking a Software Development or QA internship. Full-stack web, mobile, and database projects." />
+    <meta property="og:title" content="Laseya Ekanayake | Software Portfolio" />
+    <meta property="og:description" content="Software Engineering undergraduate seeking a Software Development or QA internship." />
+    <meta property="og:type" content="website" />
 
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩🏽‍💻</text></svg>" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <div class="background-animation">
         <span class="blob blob-one"></span>
         <span class="blob blob-two"></span>
@@ -32,6 +38,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#qa">QA</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -41,7 +48,7 @@
         <!-- HOME -->
         <section id="home" class="hero section">
             <div class="hero-left reveal">
-                <p class="eyebrow">Software Engineering Student</p>
+                <p class="availability"><span class="dot"></span> Open to Software Development and QA internships</p>
 
                 <h1>
                     Hi, I’m <span>Laseya Ekanayake</span>
@@ -52,12 +59,15 @@
                 </p>
 
                 <p class="hero-text">
-                    An aspiring software developer intern interested in web development,
-                    mobile application development, database systems, and practical software solutions.
+                    A Software Engineering undergraduate with a strong foundation in OOP, databases,
+                    and system analysis. I build full-stack web apps and Android apps, and I test them
+                    to make sure they work.
                 </p>
 
                 <div class="hero-actions">
-                    <a class="btn primary" href="#projects">View My Projects</a>
+                    <a class="btn primary" href="#projects">View my projects</a>
+                    <!-- Put your CV in the same folder as index.html and name it exactly like this -->
+                    <a class="btn secondary" href="Laseya-Ekanayake-CV.pdf" download>Download CV</a>
                     <a class="btn secondary" href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">
                         Visit GitHub
                     </a>
@@ -70,13 +80,15 @@
                         <img src="images/profile.jpg" alt="Laseya Ekanayake" class="profile-photo">
                     </div>
                     <h2>Laseya Ekanayake</h2>
-                    <p>Aspiring Software Developer Intern</p>
+                    <p>Software Developer / QA Intern (aspiring)</p>
 
                     <div class="profile-tags">
                         <span>Java</span>
-                        <span>C++</span>
+                        <span>C#</span>
+                        <span>React</span>
                         <span>PHP</span>
                         <span>MySQL</span>
+                        <span>QA</span>
                     </div>
                 </div>
             </div>
@@ -92,32 +104,33 @@
             <div class="about-grid">
                 <div class="about-card reveal">
                     <p>
-                        I am a Software Engineering Higher Diploma student with academic project
-                        experience in programming, system analysis, web development, mobile application
-                        development, and database fundamentals.
+                        I completed a Higher Diploma in Software Engineering at ICBT Kandy and I am
+                        progressing to a top-up degree. My projects cover web development, mobile apps,
+                        REST APIs, and database design, backed by OOP, SDLC, and system analysis.
                     </p>
 
                     <p>
-                        I enjoy learning new technologies and creating simple, useful software solutions.
-                        I am currently looking for software development internship opportunities where I
-                        can improve my technical skills and gain real industry experience.
+                        In team projects I have worked as a frontend developer and tester, so I care about
+                        both how a feature is built and how it is checked. I am looking for a
+                        Software Development or Quality Assurance internship where I can learn from a real
+                        team and gain industry experience.
                     </p>
                 </div>
 
                 <div class="stats-grid reveal">
                     <div class="stat-card">
-                        <h3>3+</h3>
-                        <p>GitHub Projects</p>
+                        <h3><span class="counter" data-target="6">0</span></h3>
+                        <p>Featured projects</p>
                     </div>
 
                     <div class="stat-card">
-                        <h3>5+</h3>
-                        <p>Academic Projects</p>
+                        <h3><span class="counter" data-target="6">0</span></h3>
+                        <p>Programming languages</p>
                     </div>
 
                     <div class="stat-card">
-                        <h3>100%</h3>
-                        <p>Ready to Learn</p>
+                        <h3><span class="counter" data-target="5">0</span></h3>
+                        <p>Databases used</p>
                     </div>
                 </div>
             </div>
@@ -134,37 +147,37 @@
                 <div class="skill-card reveal">
                     <div class="skill-icon">💻</div>
                     <h3>Programming</h3>
-                    <p>C++, Java, Basic Python</p>
+                    <p>C++, Java, JavaScript, C#, PHP, Python</p>
                 </div>
 
                 <div class="skill-card reveal">
                     <div class="skill-icon">🌐</div>
-                    <h3>Web Development</h3>
-                    <p>HTML, CSS, JavaScript, PHP</p>
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, React, TypeScript</p>
+                </div>
+
+                <div class="skill-card reveal">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Backend and APIs</h3>
+                    <p>Node.js, Express.js, PHP, ASP.NET Core, REST APIs, JWT authentication</p>
                 </div>
 
                 <div class="skill-card reveal">
                     <div class="skill-icon">🗄️</div>
                     <h3>Databases</h3>
-                    <p>MySQL, SQLite, SQL Basics</p>
+                    <p>MySQL, PostgreSQL, SQL Server, SQLite, MongoDB</p>
                 </div>
 
                 <div class="skill-card reveal">
-                    <div class="skill-icon">📱</div>
-                    <h3>Mobile Development</h3>
-                    <p>Android Studio, Java, XML, SQLite</p>
-                </div>
-
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🧠</div>
-                    <h3>Software Concepts</h3>
-                    <p>OOP, SDLC, System Analysis & Design</p>
+                    <div class="skill-icon">🧪</div>
+                    <h3>QA and Testing</h3>
+                    <p>Manual testing, test case design, bug reporting, functional and regression testing</p>
                 </div>
 
                 <div class="skill-card reveal">
                     <div class="skill-icon">🛠️</div>
                     <h3>Tools</h3>
-                    <p>GitHub, VS Code, Android Studio, XAMPP, draw.io</p>
+                    <p>Git, GitHub, VS Code, Android Studio, Figma, XAMPP, draw.io</p>
                 </div>
             </div>
         </section>
@@ -176,85 +189,223 @@
                 <h2>Featured Projects</h2>
             </div>
 
+            <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="desktop">Desktop</button>
+            </div>
+
             <div class="projects-grid">
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-category="web">
+                    <div class="project-image pawtrace">
+                        <span>🐾 Full-Stack Web App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>PAWTRACE</h3>
+                        <p>
+                            A full-stack web application that helps reunite lost pets with their owners.
+                        </p>
+                        <div class="tech-list">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <!-- TODO: replace with the real PAWTRACE repo link -->
+                        <a class="project-link" href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">
+                            View project →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-category="web">
+                    <div class="project-image kmc">
+                        <span>🏛️ REST API Platform</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>KMC City Event Management Platform</h3>
+                        <p>
+                            A service-oriented event management system for the Kandy Municipal Council,
+                            with RESTful APIs and JWT-based authentication.
+                        </p>
+                        <div class="tech-list">
+                            <span>C#</span>
+                            <span>ASP.NET Core Web API</span>
+                            <span>MVC</span>
+                            <span>SQL Server</span>
+                        </div>
+                        <!-- TODO: replace with the real KMC repo link -->
+                        <a class="project-link" href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">
+                            View project →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-category="web">
+                    <div class="project-image lifelink">
+                        <span>🩸 Health Web System</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>LifeLink SL</h3>
+                        <p>
+                            A coordination system for blood and organ donation in Sri Lanka.
+                        </p>
+                        <span class="project-role">My role: frontend developer and tester</span>
+                        <div class="tech-list">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <!-- TODO: replace with the real LifeLink SL repo link -->
+                        <a class="project-link" href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">
+                            View project →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-category="mobile">
                     <div class="project-image android">
                         <span>Android App</span>
                     </div>
-
                     <div class="project-content">
                         <h3>PrintXpress Mobile App</h3>
-
                         <p>
-                            A native Android mobile application for a digital printing service.
-                            It allows users to browse print products, place custom orders,
-                            manage profiles, and store data using SQLite.
+                            A native Android app for a digital printing service. Users can browse print
+                            products, place custom orders, manage profiles, and store data locally with SQLite.
                         </p>
-
                         <div class="tech-list">
                             <span>Java</span>
                             <span>XML</span>
                             <span>SQLite</span>
                             <span>Android Studio</span>
                         </div>
-
                         <a class="project-link" href="https://github.com/laseyae07-cmd/printxpress-mobile-app" target="_blank" rel="noopener">
-                            View Project →
+                            View project →
                         </a>
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-category="web">
                     <div class="project-image web">
                         <span>Web System</span>
                     </div>
-
                     <div class="project-content">
                         <h3>GlobeTrek Adventures Website</h3>
-
                         <p>
-                            A PHP and MySQL travel management website with travel packages,
+                            A responsive PHP and MySQL travel management website with travel packages,
                             bookings, custom travel plans, transport services, and role-based dashboards.
                         </p>
-
                         <div class="tech-list">
                             <span>PHP</span>
                             <span>MySQL</span>
                             <span>HTML</span>
                             <span>CSS</span>
                         </div>
-
                         <a class="project-link" href="https://github.com/laseyae07-cmd/globetrek-adventures-website" target="_blank" rel="noopener">
-                            View Project →
+                            View project →
                         </a>
                     </div>
                 </article>
 
-                <article class="project-card reveal">
+                <article class="project-card reveal" data-category="desktop">
                     <div class="project-image cpp">
                         <span>C++ System</span>
                     </div>
-
                     <div class="project-content">
                         <h3>Genius Books Management System</h3>
-
                         <p>
-                            A console-based C++ bookshop management system with login,
-                            book inventory management, sales recording, input validation,
-                            and file handling.
+                            A console-based C++ bookshop management system with login, book inventory
+                            management, sales recording, input validation, and file handling.
                         </p>
-
                         <div class="tech-list">
                             <span>C++</span>
                             <span>File Handling</span>
                             <span>Console App</span>
                         </div>
-
                         <a class="project-link" href="https://github.com/laseyae07-cmd/genius-books-management-system" target="_blank" rel="noopener">
-                            View Project →
+                            View project →
                         </a>
                     </div>
                 </article>
+            </div>
+        </section>
+
+        <!-- QA -->
+        <section id="qa" class="section">
+            <div class="section-title reveal">
+                <p class="eyebrow">Quality Assurance</p>
+                <h2>How I check that software works</h2>
+            </div>
+
+            <div class="qa-layout">
+                <div class="qa-steps">
+                    <div class="about-card qa-step reveal">
+                        <h3>Test case design</h3>
+                        <p>I turn requirements into clear test cases with steps and expected results.</p>
+                    </div>
+                    <div class="about-card qa-step reveal">
+                        <h3>Functional testing</h3>
+                        <p>I test each feature by hand against its requirements, including invalid input.</p>
+                    </div>
+                    <div class="about-card qa-step reveal">
+                        <h3>Regression testing</h3>
+                        <p>After a fix, I re-run earlier tests to confirm nothing else broke.</p>
+                    </div>
+                    <div class="about-card qa-step reveal">
+                        <h3>Bug reporting</h3>
+                        <p>I write reports with steps to reproduce, expected and actual results, and severity.</p>
+                    </div>
+                </div>
+
+                <div class="about-card qa-sample reveal">
+                    <h3>Example test case format</h3>
+                    <p>A sample of how I structure test cases for a login feature.</p>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Scenario</th>
+                                    <th>Steps</th>
+                                    <th>Expected result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TC-01</td>
+                                    <td>Login with valid details</td>
+                                    <td>Enter a registered email and password, then click Login</td>
+                                    <td>User is taken to their dashboard</td>
+                                </tr>
+                                <tr>
+                                    <td>TC-02</td>
+                                    <td>Login with a wrong password</td>
+                                    <td>Enter a registered email and a wrong password</td>
+                                    <td>An error message appears and the user stays on the login page</td>
+                                </tr>
+                                <tr>
+                                    <td>TC-03</td>
+                                    <td>Submit empty fields</td>
+                                    <td>Leave both fields blank and click Login</td>
+                                    <td>Validation messages show for each required field</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bug-flow" aria-label="Bug life cycle">
+                        <span>Found</span><i>→</i>
+                        <span>Reported</span><i>→</i>
+                        <span>Fixed</span><i>→</i>
+                        <span>Retested</span><i>→</i>
+                        <span>Closed</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -267,23 +418,24 @@
 
             <div class="focus-grid">
                 <div class="focus-card reveal">
-                    <h3>Frontend Development</h3>
+                    <h3>Full-stack development</h3>
                     <p>
-                        Creating clean and responsive web pages using HTML, CSS, and JavaScript.
+                        Responsive pages with HTML, CSS, JavaScript, and React, plus APIs and databases
+                        with Node.js, PHP, ASP.NET Core, and SQL.
                     </p>
                 </div>
 
                 <div class="focus-card reveal">
-                    <h3>Backend Basics</h3>
+                    <h3>Mobile app development</h3>
                     <p>
-                        Working with PHP, MySQL, database connections, forms, and simple dashboards.
+                        Android apps built with Java, XML layouts, and SQLite storage.
                     </p>
                 </div>
 
                 <div class="focus-card reveal">
-                    <h3>Mobile App Development</h3>
+                    <h3>Quality assurance</h3>
                     <p>
-                        Developing Android applications using Java, XML layouts, and SQLite databases.
+                        Manual testing, test case design, bug reporting, and functional and regression checks.
                     </p>
                 </div>
             </div>
@@ -296,15 +448,15 @@
                 <h2>Let’s connect</h2>
 
                 <p>
-                    I am currently looking for software development internship opportunities
-                    where I can learn, contribute, and grow as a developer.
+                    I am looking for a Software Development or QA internship where I can learn,
+                    contribute, and grow as a developer.
                 </p>
 
                 <p class="email-text">Email: laseyae07@gmail.com</p>
 
                 <div class="contact-links">
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=laseyae07@gmail.com&su=Internship%20Opportunity%20Inquiry" target="_blank" rel="noopener">
-                        Email Me
+                        Email me
                     </a>
                     <a href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">GitHub</a>
                     <a href="https://www.linkedin.com/in/laseya-ekanayake-956b25394/" target="_blank" rel="noopener">LinkedIn</a>
@@ -314,7 +466,7 @@
     </main>
 
     <footer>
-        <p>© 2026 Laseya Ekanayake. All rights reserved.</p>
+        <p>© <span id="year">2026</span> Laseya Ekanayake. All rights reserved.</p>
     </footer>
 
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
