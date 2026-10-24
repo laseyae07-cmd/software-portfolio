@@ -6,12 +6,14 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 
 // Mobile menu
 menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+    const isOpen = navLinks.classList.toggle("show");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
 document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
     });
 });
 
@@ -19,11 +21,10 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 const typingText = document.querySelector("#typing-text");
 
 const phrases = [
-    "Aspiring Software Developer Intern",
-    "Aspiring QA Intern",
-    "Full-Stack Web Developer in the Making",
-    "Android App Development Learner",
-    "Passionate About Building Real Projects"
+    "Frontend-focused developer",
+    "Learning UI/UX with Figma",
+    "Creative problem-solver",
+    "Builder of useful digital experiences"
 ];
 
 let phraseIndex = 0;
@@ -57,10 +58,9 @@ function typeEffect() {
     setTimeout(typeEffect, speed);
 }
 
-if (prefersReducedMotion) {
-    typingText.textContent = phrases[0];
-} else {
-    typeEffect();
+if (typingText) {
+    if (prefersReducedMotion) typingText.textContent = phrases[0];
+    else typeEffect();
 }
 
 // Scroll reveal animation
@@ -164,6 +164,7 @@ filterButtons.forEach((button) => {
 
         filterButtons.forEach((b) => b.classList.remove("active"));
         button.classList.add("active");
+        filterButtons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
 
         projectCards.forEach((card) => {
             const show = filter === "all" || card.dataset.category === filter;
@@ -175,3 +176,11 @@ filterButtons.forEach((button) => {
 
 // Footer year
 document.querySelector("#year").textContent = new Date().getFullYear();
+// Close the mobile menu with Escape for keyboard navigation.
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navLinks.classList.contains("show")) {
+        navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.focus();
+    }
+});
