@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Laseya Ekanayake | Software Portfolio</title>
+    <title>Laseya Ekanayake — Design Meets Code</title>
 
     <meta name="description"
-          content="Portfolio of Laseya Ekanayake, a Software Engineering undergraduate seeking a Software Development or QA internship. Full-stack web, mobile, and database projects." />
+          content="Creative portfolio of Laseya Ekanayake: frontend development, Figma UI/UX design exploration, and purposeful software projects." />
     <meta property="og:title" content="Laseya Ekanayake | Software Portfolio" />
-    <meta property="og:description" content="Software Engineering undergraduate seeking a Software Development or QA internship." />
+    <meta property="og:description" content="Frontend development, UI/UX design exploration, and thoughtful software projects." />
     <meta property="og:type" content="website" />
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩🏽‍💻</text></svg>" />
+    <meta name="theme-color" content="#0a0b10" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="creative.css" />
 </head>
 
 <body>
@@ -27,19 +32,19 @@
 
     <header class="site-header">
         <nav class="navbar">
-            <a class="logo" href="#home">Portfolio<span>.</span></a>
+            <a class="logo" href="#home" aria-label="Laseya portfolio home"><span class="logo-mark">LE<span>✳</span></span><small>/ portfolio</small></a>
 
-            <button class="menu-toggle" aria-label="Open navigation menu">
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
                 ☰
             </button>
 
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Selected work</a></li>
                 <li><a href="#qa">QA</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="nav-contact" href="#contact">Let’s talk ↗</a></li>
             </ul>
         </nav>
     </header>
@@ -48,10 +53,11 @@
         <!-- HOME -->
         <section id="home" class="hero section">
             <div class="hero-left reveal">
-                <p class="availability"><span class="dot"></span> Open to Software Development and QA internships</p>
+                <p class="availability"><span class="dot"></span> Open to frontend &amp; UI/UX opportunities</p>
+                <p class="hero-label">INDEPENDENT PORTFOLIO / 2026</p>
 
                 <h1>
-                    Hi, I’m <span>Laseya Ekanayake</span>
+                    Where <span>design</span><br>meets <span class="hero-code">code.</span>
                 </h1>
 
                 <p class="typing-line">
@@ -59,13 +65,11 @@
                 </p>
 
                 <p class="hero-text">
-                    A Software Engineering undergraduate with a strong foundation in OOP, databases,
-                    and system analysis. I build full-stack web apps and Android apps, and I test them
-                    to make sure they work.
+                    Hey, I’m Laseya. I build thoughtful digital experiences — from responsive interfaces to full-stack projects — with a growing focus on UI/UX design.
                 </p>
 
                 <div class="hero-actions">
-                    <a class="btn primary" href="#projects">View my projects</a>
+                    <a class="btn primary" href="#projects">Explore my work ↗</a>
                     <!-- Put your CV in the same folder as index.html and name it exactly like this -->
                     <a class="btn secondary" href="Laseya_Ekanayake_CV.pdf" download>Download CV</a>
                     <a class="btn secondary" href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">
@@ -75,12 +79,14 @@
             </div>
 
             <div class="hero-right reveal">
+                <span class="stage-label">FIG. 01 / DESIGN × DEVELOPMENT</span>
                 <div class="profile-card floating">
+                    <div class="profile-topline"><span>CREATIVE PROFILE</span><span>✳</span></div>
                     <div class="profile-photo-wrap">
                         <img src="images/profile.jpg" alt="Laseya Ekanayake" class="profile-photo">
                     </div>
-                    <h2>Laseya Ekanayake</h2>
-                    <p>Software Developer / QA Intern (aspiring)</p>
+                    <h2>Laseya Ekanayake <span class="profile-spark">↗</span></h2>
+                    <p>Frontend · UI/UX · Software</p>
 
                     <div class="profile-tags">
                         <span>Java</span>
@@ -97,23 +103,18 @@
         <!-- ABOUT -->
         <section id="about" class="section">
             <div class="section-title reveal">
-                <p class="eyebrow">About Me</p>
-                <h2>Building my path in software development</h2>
+                <p class="eyebrow">01 / ABOUT</p>
+                <h2>Curiosity is my <em>creative engine.</em></h2>
             </div>
 
             <div class="about-grid">
                 <div class="about-card reveal">
                     <p>
-                        I completed a Higher Diploma in Software Engineering at ICBT Kandy and I am
-                        progressing to a top-up degree. My projects cover web development, mobile apps,
-                        REST APIs, and database design, backed by OOP, SDLC, and system analysis.
+                        I completed the coursework for my Higher Diploma in Software Engineering at ICBT Kandy and am awaiting final results. I enjoy the space where interface design, technology, and everyday problems meet.
                     </p>
 
                     <p>
-                        In team projects I have worked as a frontend developer and tester, so I care about
-                        both how a feature is built and how it is checked. I am looking for a
-                        Software Development or Quality Assurance internship where I can learn from a real
-                        team and gain industry experience.
+                        My personal projects span frontend and full-stack development, mobile applications, and testing. I am documenting my personal Figma work starting with PawTrace, while looking for junior and internship opportunities in frontend, software development, and UI/UX.
                     </p>
                 </div>
 
@@ -139,8 +140,8 @@
         <!-- SKILLS -->
         <section id="skills" class="section">
             <div class="section-title reveal">
-                <p class="eyebrow">Technical Skills</p>
-                <h2>Technologies and tools I work with</h2>
+                <p class="eyebrow">02 / EXPERTISE</p>
+                <h2>Tools that help me <em>create.</em></h2>
             </div>
 
             <div class="skills-grid">
@@ -174,34 +175,65 @@
                     <p>Manual testing, test case design, bug reporting, functional and regression testing</p>
                 </div>
 
+                <div class="skill-card reveal"><div class="skill-icon">🎨</div><h3>UI/UX Design</h3><p>Figma, user flows, responsive interfaces, design documentation and visual hierarchy</p></div>
                 <div class="skill-card reveal">
-                    <div class="skill-icon">🛠️</div>
+                    <div class="skill-icon">✳</div>
                     <h3>Tools</h3>
                     <p>Git, GitHub, VS Code, Android Studio, Figma, XAMPP, draw.io</p>
                 </div>
             </div>
         </section>
 
+        <!-- APPROACH -->
+        <section class="section approach-section">
+            <div class="section-title reveal"><p class="eyebrow">03 / HOW I THINK</p><h2>More than <em>pretty pixels.</em></h2></div>
+            <div class="approach-grid">
+                <article class="approach-card reveal"><span>01 / UNDERSTAND</span><strong>⌕</strong><h3>Start with purpose.</h3><p>Consider the problem, the people, and what each interface should communicate.</p></article>
+                <article class="approach-card reveal"><span>02 / SHAPE</span><strong>✳</strong><h3>Make it intuitive.</h3><p>Explore hierarchy, structure, and layouts that work across devices.</p></article>
+                <article class="approach-card reveal"><span>03 / BUILD &amp; CHECK</span><strong>↗</strong><h3>Bring ideas to life.</h3><p>Implement features, test interactions, and refine the details.</p></article>
+            </div>
+        </section>
         <!-- PROJECTS -->
         <section id="projects" class="section">
             <div class="section-title reveal">
-                <p class="eyebrow">My Work</p>
-                <h2>Featured Projects</h2>
+                <p class="eyebrow">04 / SELECTED WORK</p>
+                <h2>Projects with <em>personality.</em></h2>
+                <p class="section-intro">A selection of personal builds and design exploration. Filter by discipline.</p>
             </div>
 
             <div class="filter-bar reveal" role="group" aria-label="Filter projects">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="desktop">Desktop</button>
-                <button class="filter-btn" data-filter="design">UI/UX · Figma</button>
+                <button class="filter-btn active" aria-pressed="true" data-filter="all">All</button>
+                <button class="filter-btn" aria-pressed="false" data-filter="web">Web</button>
+                <button class="filter-btn" aria-pressed="false" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" aria-pressed="false" data-filter="desktop">Desktop</button>
+                <button class="filter-btn" aria-pressed="false" data-filter="design">UI/UX · Figma</button>
             </div>
 
             <div class="projects-grid">
-                <article class="project-card reveal" data-category="web">
-                    <div class="project-image pawtrace">
-                        <span>🐾 Full-Stack Web App</span>
+                <article class="project-card reveal" data-category="design">
+                    <div class="project-image figma-pawtrace"><div class="mini-design" aria-hidden="true"><div class="mini-top">✳ &nbsp; PAWTRACE / UI STUDY <span>01—06</span></div><div class="mini-screens"><i></i><i></i><i></i></div><div class="mini-bottom">PERSONAL CASE STUDY <strong>UX / UI ↗</strong></div></div><span class="project-image-label">Figma / In progress</span></div>
+                    <div class="project-content">
+                        <h3>PAWTRACE — Responsive UI/UX Design</h3>
+                        <p>
+                            A design case study based on the PAWTRACE lost-and-found pet website:
+                            documenting its responsive homepage, community report cards, search and filters,
+                            and report creation experience.
+                        </p>
+                        <span class="project-role">Personal design study · Work in progress</span>
+                        <div class="tech-list">
+                            <span>Figma</span>
+                            <span>Responsive UI</span>
+                            <span>Design Documentation</span>
+                            <span>User Flows</span>
+                        </div>
+                        <a class="project-link" href="https://www.figma.com/design/bTaVLaony2333szz7mdK2N" target="_blank" rel="noopener">
+                            View Figma project →
+                        </a>
+                        <p class="project-note">Draft design documentation. Editable components and prototype are being prepared.</p>
                     </div>
+                </article>
+                <article class="project-card reveal" data-category="web">
+                    <div class="project-image pawtrace"><span>🐾 FULL-STACK / PAWTRACE</span><strong class="project-monogram" aria-hidden="true">PT.</strong></div>
                     <div class="project-content">
                         <h3>PAWTRACE</h3>
                         <p>
@@ -236,7 +268,6 @@
                             <span>MVC</span>
                             <span>SQL Server</span>
                         </div>
-                        <!-- TODO: replace with the real KMC repo link -->
                         <a class="project-link" href="https://github.com/laseyae07-cmd/KMC-City-Event-Management-Platform" target="_blank" rel="noopener">
                             View project →
                         </a>
@@ -260,8 +291,7 @@
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-                        <!-- TODO: replace with the real LifeLink SL repo link -->
-                        <a class="project-link" href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">
+                        <a class="project-link" href="https://github.com/laseyae07-cmd/LifeLink-SL" target="_blank" rel="noopener">
                             View project →
                         </a>
                     </div>
@@ -331,39 +361,15 @@
                         </a>
                     </div>
                 </article>
-                <!-- Portfolio publication requires real editable Figma screens and reviewed images. -->
-                <article class="project-card reveal" data-category="design">
-                    <div class="project-image figma-pawtrace">
-                        <span>✦ Figma UI/UX</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>PAWTRACE — Responsive UI/UX Design</h3>
-                        <p>
-                            A design case study based on the PAWTRACE lost-and-found pet website:
-                            documenting its responsive homepage, community report cards, search and filters,
-                            and report creation experience.
-                        </p>
-                        <span class="project-role">Personal design study · Work in progress</span>
-                        <div class="tech-list">
-                            <span>Figma</span>
-                            <span>Responsive UI</span>
-                            <span>Design Documentation</span>
-                            <span>User Flows</span>
-                        </div>
-                        <a class="project-link" href="https://www.figma.com/design/bTaVLaony2333szz7mdK2N" target="_blank" rel="noopener">
-                            View Figma project →
-                        </a>
-                        <p class="project-note">Draft design documentation. Editable components and prototype are being prepared.</p>
-                    </div>
-                </article>
+
             </div>
         </section>
 
         <!-- QA -->
         <section id="qa" class="section">
             <div class="section-title reveal">
-                <p class="eyebrow">Quality Assurance</p>
-                <h2>How I check that software works</h2>
+                <p class="eyebrow">05 / QUALITY MATTERS</p>
+                <h2>It should work <em>beautifully.</em></h2>
             </div>
 
             <div class="qa-layout">
@@ -437,8 +443,8 @@
         <!-- WHAT I CAN DO -->
         <section class="section">
             <div class="section-title reveal">
-                <p class="eyebrow">Internship Focus</p>
-                <h2>What I can contribute as an intern</h2>
+                <p class="eyebrow">06 / WHAT I BRING</p>
+                <h2>Creative thinking. <em>Practical skills.</em></h2>
             </div>
 
             <div class="focus-grid">
@@ -451,10 +457,7 @@
                 </div>
 
                 <div class="focus-card reveal">
-                    <h3>Mobile app development</h3>
-                    <p>
-                        Android apps built with Java, XML layouts, and SQLite storage.
-                    </p>
+                    <h3>UI design &amp; implementation</h3><p>Figma design exploration, responsive layouts, visual hierarchy, and translating interfaces into code.</p>
                 </div>
 
                 <div class="focus-card reveal">
@@ -469,18 +472,17 @@
         <!-- CONTACT -->
         <section id="contact" class="section contact-section">
             <div class="contact-card reveal">
-                <p class="eyebrow">Contact Me</p>
-                <h2>Let’s connect</h2>
+                <p class="eyebrow">07 / SAY HELLO</p>
+                <h2>Have something <em>in mind?</em></h2>
 
                 <p>
-                    I am looking for a Software Development or QA internship where I can learn,
-                    contribute, and grow as a developer.
+                    I’m open to junior and internship opportunities in frontend development, UI/UX, and software engineering. Let’s connect.
                 </p>
 
-                <p class="email-text">Email: laseyae07@gmail.com</p>
+                <p class="email-text">laseyae07@gmail.com</p>
 
                 <div class="contact-links">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=laseyae07@gmail.com&su=Internship%20Opportunity%20Inquiry" target="_blank" rel="noopener">
+                    <a href="mailto:laseyae07@gmail.com?subject=Portfolio%20Inquiry" target="_blank" rel="noopener">
                         Email me
                     </a>
                     <a href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">GitHub</a>
@@ -491,7 +493,7 @@
     </main>
 
     <footer>
-        <p>© <span id="year">2026</span> Laseya Ekanayake. All rights reserved.</p>
+        <p>© <span id="year">2026</span> Laseya Ekanayake. <span class="footer-note">Designed with curiosity, built with care ✳</span></p>
     </footer>
 
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
