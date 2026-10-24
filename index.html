@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="creative.css" />
+    <link rel="stylesheet" href="motion.css" />
 </head>
 
 <body>
@@ -57,7 +58,8 @@
                 <p class="hero-label">INDEPENDENT PORTFOLIO / 2026</p>
 
                 <h1>
-                    Where <span>design</span><br>meets <span class="hero-code">code.</span>
+                    <span class="hero-title-line">Where <span class="hero-highlight">design</span></span>
+                    <span class="hero-title-line">meets <span class="hero-code">code.</span></span>
                 </h1>
 
                 <p class="typing-line">
@@ -69,17 +71,20 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a class="btn primary" href="#projects">Explore my work ↗</a>
+                    <a class="btn primary motion-magnetic" href="#projects">Explore my work ↗</a>
                     <!-- Put your CV in the same folder as index.html and name it exactly like this -->
                     <a class="btn secondary" href="Laseya_Ekanayake_CV.pdf" download>Download CV</a>
                     <a class="btn secondary" href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">
                         Visit GitHub
                     </a>
                 </div>
+                <div class="scroll-cue" aria-hidden="true"><span>SCROLL TO EXPLORE</span><i></i></div>
             </div>
 
             <div class="hero-right reveal">
                 <span class="stage-label">FIG. 01 / DESIGN × DEVELOPMENT</span>
+                <div class="floating-chip floating-chip-a" aria-hidden="true"><span>✳</span> UI in motion</div>
+                <div class="floating-chip floating-chip-b" aria-hidden="true">FRONTEND <span>↗</span></div>
                 <div class="profile-card floating">
                     <div class="profile-topline"><span>CREATIVE PROFILE</span><span>✳</span></div>
                     <div class="profile-photo-wrap">
@@ -99,6 +104,14 @@
                 </div>
             </div>
         </section>
+
+        <!-- ANIMATED DISCIPLINES STRIP -->
+        <div class="skill-marquee" role="img" aria-label="Interface design, frontend development, Figma, React and TypeScript, creative problem solving">
+            <div class="skill-marquee-track" aria-hidden="true">
+                <span>DESIGN THINKING <i>✳</i> FRONTEND DEVELOPMENT <i>✳</i> FIGMA <i>✳</i> RESPONSIVE UI <i>✳</i> CREATIVE PROBLEM SOLVING <i>✳</i></span>
+                <span>DESIGN THINKING <i>✳</i> FRONTEND DEVELOPMENT <i>✳</i> FIGMA <i>✳</i> RESPONSIVE UI <i>✳</i> CREATIVE PROBLEM SOLVING <i>✳</i></span>
+            </div>
+        </div>
 
         <!-- ABOUT -->
         <section id="about" class="section">
@@ -501,5 +514,6 @@
     </button>
 
     <script src="script.js"></script>
+    <script src="motion.js"></script>
 </body>
 </html>
