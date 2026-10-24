@@ -21,11 +21,10 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 const typingText = document.querySelector("#typing-text");
 
 const phrases = [
-    "Aspiring Software Developer Intern",
-    "Aspiring QA Intern",
-    "Full-Stack Web Developer in the Making",
-    "Android App Development Learner",
-    "Passionate About Building Real Projects"
+    "Frontend-focused developer",
+    "Learning UI/UX with Figma",
+    "Creative problem-solver",
+    "Builder of useful digital experiences"
 ];
 
 let phraseIndex = 0;
