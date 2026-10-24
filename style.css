@@ -883,25 +883,3 @@ td {
         transform: none;
     }
 }
-
-/* Figma UI/UX portfolio project */
-.project-image.figma-design {
-    background: radial-gradient(circle at 78% 20%, rgba(255,255,255,.18), transparent 35%),
-                linear-gradient(135deg, #1b1233 0%, #6940ac 50%, #b45496 100%);
-    color: #fff;
-    letter-spacing: .03em;
-}
-.project-image.figma-design::before {
-    content: '';
-    position: absolute;
-    width: 130px;
-    height: 100px;
-    left: 14%;
-    top: 24%;
-    border: 1px solid rgba(255,255,255,.5);
-    border-radius: 14px;
-    transform: rotate(-11deg);
-    box-shadow: 13px 12px 0 rgba(255,255,255,.09), 26px 24px 0 rgba(255,255,255,.05);
-}
-.project-image.figma-design span { position: relative; z-index: 2; text-shadow: 0 2px 12px rgba(0,0,0,.35); }
-.project-note { font-size: 13px; color: var(--muted); margin-top: 8px; font-style: italic; }
