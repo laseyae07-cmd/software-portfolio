@@ -1,519 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Laseya Ekanayake — Design Meets Code</title>
-
-    <meta name="description"
-          content="Creative portfolio of Laseya Ekanayake: frontend development, Figma UI/UX design exploration, and purposeful software projects." />
-    <meta property="og:title" content="Laseya Ekanayake | Software Portfolio" />
-    <meta property="og:description" content="Frontend development, UI/UX design exploration, and thoughtful software projects." />
-    <meta property="og:type" content="website" />
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩🏽‍💻</text></svg>" />
-    <meta name="theme-color" content="#0a0b10" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="creative.css" />
-    <link rel="stylesheet" href="motion.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#08080c" />
+<meta name="description" content="Laseya Ekanayake — creative frontend developer exploring UI/UX, building purposeful websites, apps and thoughtful digital experiences." />
+<meta property="og:title" content="Laseya Ekanayake — Creative Developer & UI/UX" />
+<meta property="og:description" content="An immersive portfolio of frontend engineering, personal design work and digital experiences." />
+<meta property="og:type" content="website" />
+<title>Laseya Ekanayake® — Creative Developer & UI/UX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="immersive.css" />
+<script defer src="immersive.js"></script>
 </head>
-
 <body>
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <div class="background-animation">
-        <span class="blob blob-one"></span>
-        <span class="blob blob-two"></span>
-        <span class="blob blob-three"></span>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="intro-curtain" aria-hidden="true"><span>LE<span class="intro-flower">✳</span></span><small>DESIGN × DEVELOPMENT</small></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="cursor-aura" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+<header class="header" id="top">
+  <a href="#home" class="brand" aria-label="Laseya Ekanayake, home">LE<span>✳</span><small>©26</small></a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a href="#work" class="nav-link">Work</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#playground" class="nav-link">Playground</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+  <div class="nav-end">
+    <span class="nav-availability"><i></i> OPEN TO OPPORTUNITIES</span>
+    <a href="#contact" class="nav-cta magnetic">Let's talk <span>↗</span></a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" inert>
+  <a href="#work">Selected work <span>01</span></a>
+  <a href="#about">About me <span>02</span></a>
+  <a href="#playground">Playground <span>03</span></a>
+  <a href="#contact">Say hello <span>04</span></a>
+</nav>
+<main id="main">
+<section class="hero" id="home" aria-label="Introduction">
+  <canvas id="starfield" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-fog" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow entrance e1"><span class="eyebrow-line"></span> PORTFOLIO / 2026 <span class="hero-superscript">01 — INTRODUCTION</span></div>
+      <h1 class="hero-title" aria-label="Not just code. Feel it.">
+        <span class="title-row entrance e2">NOT JUST</span>
+        <span class="title-row accent-row entrance e3"><em>CODE<span class="asterisk">✳</span></em></span>
+        <span class="title-row entrance e4">FEEL <span class="stroke-word">IT.</span></span>
+      </h1>
+      <p class="hero-lede entrance e5">I'm <strong>Laseya Ekanayake</strong> — a frontend-focused developer exploring UI/UX. I turn ideas into interfaces you can feel, use, and remember.</p>
+      <div class="hero-actions entrance e6">
+        <a href="#work" class="pill-button button-light magnetic"><span>Explore my work</span><span class="button-arrow">↗</span></a>
+        <a href="Laseya_Ekanayake_CV.pdf" download class="pill-button button-outline"><span>Download CV</span><span class="button-arrow">↓</span></a>
+      </div>
     </div>
-
-    <header class="site-header">
-        <nav class="navbar">
-            <a class="logo" href="#home" aria-label="Laseya portfolio home"><span class="logo-mark">LE<span>✳</span></span><small>/ portfolio</small></a>
-
-            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
-                ☰
-            </button>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Selected work</a></li>
-                <li><a href="#qa">QA</a></li>
-                <li><a class="nav-contact" href="#contact">Let’s talk ↗</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- HOME -->
-        <section id="home" class="hero section">
-            <div class="hero-left reveal">
-                <p class="availability"><span class="dot"></span> Open to frontend &amp; UI/UX opportunities</p>
-                <p class="hero-label">INDEPENDENT PORTFOLIO / 2026</p>
-
-                <h1>
-                    <span class="hero-title-line">Where <span class="hero-highlight">design</span></span>
-                    <span class="hero-title-line">meets <span class="hero-code">code.</span></span>
-                </h1>
-
-                <p class="typing-line">
-                    <span id="typing-text"></span>
-                </p>
-
-                <p class="hero-text">
-                    Hey, I’m Laseya. I build thoughtful digital experiences — from responsive interfaces to full-stack projects — with a growing focus on UI/UX design.
-                </p>
-
-                <div class="hero-actions">
-                    <a class="btn primary motion-magnetic" href="#projects">Explore my work ↗</a>
-                    <!-- Put your CV in the same folder as index.html and name it exactly like this -->
-                    <a class="btn secondary" href="Laseya_Ekanayake_CV.pdf" download>Download CV</a>
-                    <a class="btn secondary" href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">
-                        Visit GitHub
-                    </a>
-                </div>
-                <div class="scroll-cue" aria-hidden="true"><span>SCROLL TO EXPLORE</span><i></i></div>
-            </div>
-
-            <div class="hero-right reveal">
-                <span class="stage-label">FIG. 01 / DESIGN × DEVELOPMENT</span>
-                <div class="floating-chip floating-chip-a" aria-hidden="true"><span>✳</span> UI in motion</div>
-                <div class="floating-chip floating-chip-b" aria-hidden="true">FRONTEND <span>↗</span></div>
-                <div class="profile-card floating">
-                    <div class="profile-topline"><span>CREATIVE PROFILE</span><span>✳</span></div>
-                    <div class="profile-photo-wrap">
-                        <img src="images/profile.jpg" alt="Laseya Ekanayake" class="profile-photo">
-                    </div>
-                    <h2>Laseya Ekanayake <span class="profile-spark">↗</span></h2>
-                    <p>Frontend · UI/UX · Software</p>
-
-                    <div class="profile-tags">
-                        <span>Java</span>
-                        <span>C#</span>
-                        <span>React</span>
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>QA</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ANIMATED DISCIPLINES STRIP -->
-        <div class="skill-marquee" role="img" aria-label="Interface design, frontend development, Figma, React and TypeScript, creative problem solving">
-            <div class="skill-marquee-track" aria-hidden="true">
-                <span>DESIGN THINKING <i>✳</i> FRONTEND DEVELOPMENT <i>✳</i> FIGMA <i>✳</i> RESPONSIVE UI <i>✳</i> CREATIVE PROBLEM SOLVING <i>✳</i></span>
-                <span>DESIGN THINKING <i>✳</i> FRONTEND DEVELOPMENT <i>✳</i> FIGMA <i>✳</i> RESPONSIVE UI <i>✳</i> CREATIVE PROBLEM SOLVING <i>✳</i></span>
-            </div>
+    <div class="hero-scene entrance e5" aria-label="Animated digital sculpture">
+      <div class="scene-stage">
+        <div class="scene-aura"></div>
+        <div class="orbital orbit-one"></div>
+        <div class="orbital orbit-two"></div>
+        <div class="orbital orbit-three"></div>
+        <div class="orb-core">
+          <div class="orb-shine"></div>
+          <div class="orb-globe"></div>
+          <div class="orb-symbol">LE<span>✳</span></div>
         </div>
-
-        <!-- ABOUT -->
-        <section id="about" class="section">
-            <div class="section-title reveal">
-                <p class="eyebrow">01 / ABOUT</p>
-                <h2>Curiosity is my <em>creative engine.</em></h2>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-card reveal">
-                    <p>
-                        I completed the coursework for my Higher Diploma in Software Engineering at ICBT Kandy and am awaiting final results. I enjoy the space where interface design, technology, and everyday problems meet.
-                    </p>
-
-                    <p>
-                        My personal projects span frontend and full-stack development, mobile applications, and testing. I am documenting my personal Figma work starting with PawTrace, while looking for junior and internship opportunities in frontend, software development, and UI/UX.
-                    </p>
-                </div>
-
-                <div class="stats-grid reveal">
-                    <div class="stat-card">
-                        <h3><span class="counter" data-target="7">0</span></h3>
-                        <p>Featured projects</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3><span class="counter" data-target="6">0</span></h3>
-                        <p>Programming languages</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3><span class="counter" data-target="5">0</span></h3>
-                        <p>Databases used</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SKILLS -->
-        <section id="skills" class="section">
-            <div class="section-title reveal">
-                <p class="eyebrow">02 / EXPERTISE</p>
-                <h2>Tools that help me <em>create.</em></h2>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-card reveal">
-                    <div class="skill-icon">💻</div>
-                    <h3>Programming</h3>
-                    <p>C++, Java, JavaScript, C#, PHP, Python</p>
-                </div>
-
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, React, TypeScript</p>
-                </div>
-
-                <div class="skill-card reveal">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Backend and APIs</h3>
-                    <p>Node.js, Express.js, PHP, ASP.NET Core, REST APIs, JWT authentication</p>
-                </div>
-
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>Databases</h3>
-                    <p>MySQL, PostgreSQL, SQL Server, SQLite, MongoDB</p>
-                </div>
-
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🧪</div>
-                    <h3>QA and Testing</h3>
-                    <p>Manual testing, test case design, bug reporting, functional and regression testing</p>
-                </div>
-
-                <div class="skill-card reveal"><div class="skill-icon">🎨</div><h3>UI/UX Design</h3><p>Figma, user flows, responsive interfaces, design documentation and visual hierarchy</p></div>
-                <div class="skill-card reveal">
-                    <div class="skill-icon">✳</div>
-                    <h3>Tools</h3>
-                    <p>Git, GitHub, VS Code, Android Studio, Figma, XAMPP, draw.io</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- APPROACH -->
-        <section class="section approach-section">
-            <div class="section-title reveal"><p class="eyebrow">03 / HOW I THINK</p><h2>More than <em>pretty pixels.</em></h2></div>
-            <div class="approach-grid">
-                <article class="approach-card reveal"><span>01 / UNDERSTAND</span><strong>⌕</strong><h3>Start with purpose.</h3><p>Consider the problem, the people, and what each interface should communicate.</p></article>
-                <article class="approach-card reveal"><span>02 / SHAPE</span><strong>✳</strong><h3>Make it intuitive.</h3><p>Explore hierarchy, structure, and layouts that work across devices.</p></article>
-                <article class="approach-card reveal"><span>03 / BUILD &amp; CHECK</span><strong>↗</strong><h3>Bring ideas to life.</h3><p>Implement features, test interactions, and refine the details.</p></article>
-            </div>
-        </section>
-        <!-- PROJECTS -->
-        <section id="projects" class="section">
-            <div class="section-title reveal">
-                <p class="eyebrow">04 / SELECTED WORK</p>
-                <h2>Projects with <em>personality.</em></h2>
-                <p class="section-intro">A selection of personal builds and design exploration. Filter by discipline.</p>
-            </div>
-
-            <div class="filter-bar reveal" role="group" aria-label="Filter projects">
-                <button class="filter-btn active" aria-pressed="true" data-filter="all">All</button>
-                <button class="filter-btn" aria-pressed="false" data-filter="web">Web</button>
-                <button class="filter-btn" aria-pressed="false" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" aria-pressed="false" data-filter="desktop">Desktop</button>
-                <button class="filter-btn" aria-pressed="false" data-filter="design">UI/UX · Figma</button>
-            </div>
-
-            <div class="projects-grid">
-                <article class="project-card reveal" data-category="design">
-                    <div class="project-image figma-pawtrace"><div class="mini-design" aria-hidden="true"><div class="mini-top">✳ &nbsp; PAWTRACE / UI STUDY <span>01—06</span></div><div class="mini-screens"><i></i><i></i><i></i></div><div class="mini-bottom">PERSONAL CASE STUDY <strong>UX / UI ↗</strong></div></div><span class="project-image-label">Figma / In progress</span></div>
-                    <div class="project-content">
-                        <h3>PAWTRACE — Responsive UI/UX Design</h3>
-                        <p>
-                            A design case study based on the PAWTRACE lost-and-found pet website:
-                            documenting its responsive homepage, community report cards, search and filters,
-                            and report creation experience.
-                        </p>
-                        <span class="project-role">Personal design study · Work in progress</span>
-                        <div class="tech-list">
-                            <span>Figma</span>
-                            <span>Responsive UI</span>
-                            <span>Design Documentation</span>
-                            <span>User Flows</span>
-                        </div>
-                        <a class="project-link" href="https://www.figma.com/design/bTaVLaony2333szz7mdK2N" target="_blank" rel="noopener">
-                            View Figma project →
-                        </a>
-                        <p class="project-note">Draft design documentation. Editable components and prototype are being prepared.</p>
-                    </div>
-                </article>
-                <article class="project-card reveal" data-category="web">
-                    <div class="project-image pawtrace"><span>🐾 FULL-STACK / PAWTRACE</span><strong class="project-monogram" aria-hidden="true">PT.</strong></div>
-                    <div class="project-content">
-                        <h3>PAWTRACE</h3>
-                        <p>
-                            A full-stack web application that helps reunite lost pets with their owners.
-                        </p>
-                        <div class="tech-list">
-                            <span>React</span>
-                            <span>TypeScript</span>
-                            <span>Node.js</span>
-                            <span>Express.js</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <a class="project-link" href="https://github.com/laseyae07-cmd/pawtrace" target="_blank" rel="noopener">
-                            View project →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal" data-category="web">
-                    <div class="project-image kmc">
-                        <span>🏛️ REST API Platform</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>KMC City Event Management Platform</h3>
-                        <p>
-                            A service-oriented event management system for the Kandy Municipal Council,
-                            with RESTful APIs and JWT-based authentication.
-                        </p>
-                        <div class="tech-list">
-                            <span>C#</span>
-                            <span>ASP.NET Core Web API</span>
-                            <span>MVC</span>
-                            <span>SQL Server</span>
-                        </div>
-                        <a class="project-link" href="https://github.com/laseyae07-cmd/KMC-City-Event-Management-Platform" target="_blank" rel="noopener">
-                            View project →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal" data-category="web">
-                    <div class="project-image lifelink">
-                        <span>🩸 Health Web System</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>LifeLink SL</h3>
-                        <p>
-                            A coordination system for blood and organ donation in Sri Lanka.
-                        </p>
-                        <span class="project-role">My role: frontend developer and tester</span>
-                        <div class="tech-list">
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a class="project-link" href="https://github.com/laseyae07-cmd/LifeLink-SL" target="_blank" rel="noopener">
-                            View project →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal" data-category="mobile">
-                    <div class="project-image android">
-                        <span>Android App</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>PrintXpress Mobile App</h3>
-                        <p>
-                            A native Android app for a digital printing service. Users can browse print
-                            products, place custom orders, manage profiles, and store data locally with SQLite.
-                        </p>
-                        <div class="tech-list">
-                            <span>Java</span>
-                            <span>XML</span>
-                            <span>SQLite</span>
-                            <span>Android Studio</span>
-                        </div>
-                        <a class="project-link" href="https://github.com/laseyae07-cmd/printxpress-mobile-app" target="_blank" rel="noopener">
-                            View project →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal" data-category="web">
-                    <div class="project-image web">
-                        <span>Web System</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>GlobeTrek Adventures Website</h3>
-                        <p>
-                            A responsive PHP and MySQL travel management website with travel packages,
-                            bookings, custom travel plans, transport services, and role-based dashboards.
-                        </p>
-                        <div class="tech-list">
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                        <a class="project-link" href="https://github.com/laseyae07-cmd/globetrek-adventures-website" target="_blank" rel="noopener">
-                            View project →
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal" data-category="desktop">
-                    <div class="project-image cpp">
-                        <span>C++ System</span>
-                    </div>
-                    <div class="project-content">
-                        <h3>Genius Books Management System</h3>
-                        <p>
-                            A console-based C++ bookshop management system with login, book inventory
-                            management, sales recording, input validation, and file handling.
-                        </p>
-                        <div class="tech-list">
-                            <span>C++</span>
-                            <span>File Handling</span>
-                            <span>Console App</span>
-                        </div>
-                        <a class="project-link" href="https://github.com/laseyae07-cmd/genius-books-management-system" target="_blank" rel="noopener">
-                            View project →
-                        </a>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- QA -->
-        <section id="qa" class="section">
-            <div class="section-title reveal">
-                <p class="eyebrow">05 / QUALITY MATTERS</p>
-                <h2>It should work <em>beautifully.</em></h2>
-            </div>
-
-            <div class="qa-layout">
-                <div class="qa-steps">
-                    <div class="about-card qa-step reveal">
-                        <h3>Test case design</h3>
-                        <p>I turn requirements into clear test cases with steps and expected results.</p>
-                    </div>
-                    <div class="about-card qa-step reveal">
-                        <h3>Functional testing</h3>
-                        <p>I test each feature by hand against its requirements, including invalid input.</p>
-                    </div>
-                    <div class="about-card qa-step reveal">
-                        <h3>Regression testing</h3>
-                        <p>After a fix, I re-run earlier tests to confirm nothing else broke.</p>
-                    </div>
-                    <div class="about-card qa-step reveal">
-                        <h3>Bug reporting</h3>
-                        <p>I write reports with steps to reproduce, expected and actual results, and severity.</p>
-                    </div>
-                </div>
-
-                <div class="about-card qa-sample reveal">
-                    <h3>Example test case format</h3>
-                    <p>A sample of how I structure test cases for a login feature.</p>
-
-                    <div class="table-wrap">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Scenario</th>
-                                    <th>Steps</th>
-                                    <th>Expected result</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>TC-01</td>
-                                    <td>Login with valid details</td>
-                                    <td>Enter a registered email and password, then click Login</td>
-                                    <td>User is taken to their dashboard</td>
-                                </tr>
-                                <tr>
-                                    <td>TC-02</td>
-                                    <td>Login with a wrong password</td>
-                                    <td>Enter a registered email and a wrong password</td>
-                                    <td>An error message appears and the user stays on the login page</td>
-                                </tr>
-                                <tr>
-                                    <td>TC-03</td>
-                                    <td>Submit empty fields</td>
-                                    <td>Leave both fields blank and click Login</td>
-                                    <td>Validation messages show for each required field</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="bug-flow" aria-label="Bug life cycle">
-                        <span>Found</span><i>→</i>
-                        <span>Reported</span><i>→</i>
-                        <span>Fixed</span><i>→</i>
-                        <span>Retested</span><i>→</i>
-                        <span>Closed</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- WHAT I CAN DO -->
-        <section class="section">
-            <div class="section-title reveal">
-                <p class="eyebrow">06 / WHAT I BRING</p>
-                <h2>Creative thinking. <em>Practical skills.</em></h2>
-            </div>
-
-            <div class="focus-grid">
-                <div class="focus-card reveal">
-                    <h3>Full-stack development</h3>
-                    <p>
-                        Responsive pages with HTML, CSS, JavaScript, and React, plus APIs and databases
-                        with Node.js, PHP, ASP.NET Core, and SQL.
-                    </p>
-                </div>
-
-                <div class="focus-card reveal">
-                    <h3>UI design &amp; implementation</h3><p>Figma design exploration, responsive layouts, visual hierarchy, and translating interfaces into code.</p>
-                </div>
-
-                <div class="focus-card reveal">
-                    <h3>Quality assurance</h3>
-                    <p>
-                        Manual testing, test case design, bug reporting, and functional and regression checks.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="section contact-section">
-            <div class="contact-card reveal">
-                <p class="eyebrow">07 / SAY HELLO</p>
-                <h2>Have something <em>in mind?</em></h2>
-
-                <p>
-                    I’m open to junior and internship opportunities in frontend development, UI/UX, and software engineering. Let’s connect.
-                </p>
-
-                <p class="email-text">laseyae07@gmail.com</p>
-
-                <div class="contact-links">
-                    <a href="mailto:laseyae07@gmail.com?subject=Portfolio%20Inquiry" target="_blank" rel="noopener">
-                        Email me
-                    </a>
-                    <a href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://www.linkedin.com/in/laseya-ekanayake-956b25394/" target="_blank" rel="noopener">LinkedIn</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© <span id="year">2026</span> Laseya Ekanayake. <span class="footer-note">Designed with curiosity, built with care ✳</span></p>
-    </footer>
-
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        ↑
-    </button>
-
-    <script src="script.js"></script>
-    <script src="motion.js"></script>
+        <div class="orbit-label label-one"><i></i> DESIGN SYSTEMS</div>
+        <div class="orbit-label label-two">REACT / TYPESCRIPT <i></i></div>
+        <div class="orbit-label label-three">FIGMA → CODE <span>↗</span></div>
+        <div class="orb-grid"></div>
+      </div>
+      <div class="scene-caption"><span>FIG 01. — THE CREATIVE PROCESS</span><span>INTERACTIVE SCULPTURE ↗</span></div>
+    </div>
+  </div>
+  <div class="hero-footer">
+    <span><span class="hero-coord">06°55′N</span> / MADE IN SRI LANKA</span>
+    <a href="#work" class="scroll-indicator">SCROLL TO EXPLORE <span>↓</span></a>
+    <span>DESIGN MEETS DEVELOPMENT <span class="tiny-star">✳</span></span>
+  </div>
+</section>
+<div class="ticker" aria-label="Creative skills"><div class="ticker-inner" aria-hidden="true">
+  <span>CREATIVE DEVELOPMENT <i>✳</i> UI / UX EXPLORATION <i>✳</i> INTERACTIVE EXPERIENCES <i>✳</i> REACT & TYPESCRIPT <i>✳</i></span>
+  <span>CREATIVE DEVELOPMENT <i>✳</i> UI / UX EXPLORATION <i>✳</i> INTERACTIVE EXPERIENCES <i>✳</i> REACT & TYPESCRIPT <i>✳</i></span>
+</div></div>
+<section class="work section-pad" id="work">
+  <div class="section-header reveal">
+    <div class="section-kicker"><span>01 / PORTFOLIO</span><span class="section-rule"></span> THE SELECTED WORK</div>
+    <div class="section-header-row"><h2>Proof of <em>curiosity.</em></h2><p>From useful tools to playful interfaces. A selection of things I've imagined, designed, built, or tested.</p></div>
+  </div>
+  <div class="work-filters reveal" role="group" aria-label="Filter projects">
+    <button type="button" class="filter active" data-filter="all" aria-pressed="true">All projects <span>07</span></button>
+    <button type="button" class="filter" data-filter="development" aria-pressed="false">Development</button>
+    <button type="button" class="filter" data-filter="design" aria-pressed="false">UI / UX</button>
+    <button type="button" class="filter" data-filter="mobile" aria-pressed="false">Mobile</button>
+  </div>
+  <div class="projects">
+    <article class="project project-feature reveal" data-category="development" tabindex="0">
+      <div class="project-visual visual-pawtrace">
+        <div class="project-top"><span>01 / WEB APPLICATION</span><span>↗</span></div>
+        <div class="mock-browser" aria-label="Stylized PawTrace interface illustration">
+          <div class="mock-browser-bar"><span class="mock-dots">● ● ●</span><span>pawtrace / lost + found</span><span>⌕</span></div>
+          <div class="mock-app">
+            <div class="mock-app-brand"><span>◉</span> PAW<span>TRACE</span></div>
+            <small>EVERY LITTLE LIFE MATTERS</small>
+            <strong>Lost doesn't<br>mean <em>gone.</em></strong>
+            <div class="mock-pet"><span>🐾</span><small>LET'S BRING THEM HOME</small></div>
+            <div class="mock-green-line"></div>
+          </div>
+        </div>
+        <span class="visual-watermark">P / 01</span>
+      </div>
+      <div class="project-info"><div class="project-meta">01 <span>FULL-STACK DEVELOPMENT</span> 2026</div><h3>PAWTRACE <span>↗</span></h3><p>A community-focused lost-and-found pet platform. Built with React, TypeScript, Express, PostgreSQL, and photo uploads.</p><div class="tags"><span>REACT</span><span>TYPESCRIPT</span><span>POSTGRESQL</span></div><a href="https://github.com/laseyae07-cmd/pawtrace" target="_blank" rel="noopener noreferrer" class="project-visit">EXPLORE PROJECT <span>↗</span></a></div>
+    </article>
+    <article class="project project-feature project-design reveal" data-category="design" tabindex="0">
+      <div class="project-visual visual-figma">
+        <div class="project-top"><span>02 / PERSONAL DESIGN STUDY</span><span>✳</span></div>
+        <div class="figma-screens" aria-label="Stylized Figma screen layout illustration">
+          <div class="figma-screen screen-left"><div class="fs-bar">PAWTRACE ◉</div><div class="fs-title"><b>Lost doesn't</b><b>mean <i>gone.</i></b></div><div class="fs-button"></div><div class="fs-lines"><i></i><i></i></div></div>
+          <div class="figma-screen screen-right"><div class="fs-bar">PAWTRACE ◉</div><div class="fs-title"><b>Pets that</b><b>need us.</b></div><div class="fs-cards"><i></i><i></i><i></i></div></div>
+        </div>
+        <div class="figma-float">Figma <span>✳</span></div>
+        <span class="visual-watermark">F / 02</span>
+      </div>
+      <div class="project-info"><div class="project-meta">02 <span>UI/UX DESIGN DOCUMENTATION</span> IN PROGRESS</div><h3>PAWTRACE — UI/UX <span>↗</span></h3><p>Recreating and documenting the existing PawTrace interface in Figma, with responsive layouts, components, and user flows. Work in progress.</p><div class="tags"><span>FIGMA</span><span>RESPONSIVE UI</span><span>IN PROGRESS</span></div><a href="https://www.figma.com/design/bTaVLaony2333szz7mdK2N" target="_blank" rel="noopener noreferrer" class="project-visit">VIEW DESIGN FILE <span>↗</span></a></div>
+    </article>
+    <article class="project project-small reveal" data-category="development" tabindex="0">
+      <div class="project-visual visual-kmc"><div class="project-top"><span>03 / API PLATFORM</span><span>↗</span></div><div class="visual-symbol">KMC<span>+</span></div><div class="visual-float">EVENTS <b>→</b> COMMUNITY</div></div>
+      <div class="project-info"><div class="project-meta">03 <span>BACKEND / PLATFORM</span></div><h3>KMC City Events <span>↗</span></h3><p>An event management platform using ASP.NET Core, REST APIs, and SQL Server.</p><div class="tags"><span>C#</span><span>ASP.NET</span><span>SQL</span></div><a class="project-visit" target="_blank" rel="noopener noreferrer" href="https://github.com/laseyae07-cmd/KMC-City-Event-Management-Platform">VIEW REPOSITORY <span>↗</span></a></div>
+    </article>
+    <article class="project project-small reveal" data-category="development" tabindex="0">
+      <div class="project-visual visual-lifelink"><div class="project-top"><span>04 / COMMUNITY TECHNOLOGY</span><span>↗</span></div><div class="visual-symbol life-symbol">L<span>♥</span>L</div><div class="visual-float">EVERY CONNECTION COUNTS</div></div>
+      <div class="project-info"><div class="project-meta">04 <span>FRONTEND & TESTING</span></div><h3>LifeLink SL <span>↗</span></h3><p>Donation coordination platform for Sri Lanka. My work focused on frontend development and testing.</p><div class="tags"><span>PHP</span><span>MYSQL</span><span>UI</span></div><a class="project-visit" target="_blank" rel="noopener noreferrer" href="https://github.com/laseyae07-cmd/LifeLink-SL">VIEW REPOSITORY <span>↗</span></a></div>
+    </article>
+    <article class="project project-small reveal" data-category="mobile" tabindex="0">
+      <div class="project-visual visual-print"><div class="project-top"><span>05 / ANDROID APPLICATION</span><span>↗</span></div><div class="phone-art"><div class="phone-speaker"></div><div class="phone-heading">Print<span>Xpress</span></div><div class="phone-swatch"><i></i><i></i><i></i></div><div class="phone-lines"><i></i><i></i></div><div class="phone-button"></div></div></div>
+      <div class="project-info"><div class="project-meta">05 <span>ANDROID APP</span></div><h3>PrintXpress <span>↗</span></h3><p>Custom print ordering and profiles in a native Android application using Java and SQLite.</p><div class="tags"><span>JAVA</span><span>ANDROID</span><span>SQLITE</span></div><a class="project-visit" target="_blank" rel="noopener noreferrer" href="https://github.com/laseyae07-cmd/printxpress-mobile-app">VIEW REPOSITORY <span>↗</span></a></div>
+    </article>
+    <article class="project project-small reveal" data-category="development" tabindex="0">
+      <div class="project-visual visual-globe"><div class="project-top"><span>06 / TRAVEL EXPERIENCE</span><span>↗</span></div><div class="visual-symbol globe-symbol">G<span>✺</span></div><div class="visual-float">GLOBETREK / ADVENTURES</div></div>
+      <div class="project-info"><div class="project-meta">06 <span>WEB APPLICATION</span></div><h3>GlobeTrek <span>↗</span></h3><p>Travel packages, bookings, and management dashboards built with PHP and MySQL.</p><div class="tags"><span>PHP</span><span>MYSQL</span><span>WEB</span></div><a class="project-visit" target="_blank" rel="noopener noreferrer" href="https://github.com/laseyae07-cmd/globetrek-adventures-website">VIEW REPOSITORY <span>↗</span></a></div>
+    </article>
+    <article class="project project-small reveal" data-category="development" tabindex="0">
+      <div class="project-visual visual-books"><div class="project-top"><span>07 / SYSTEM DEVELOPMENT</span><span>↗</span></div><div class="books-stack"><i></i><i></i><i></i></div><div class="visual-float">GENIUS BOOKS / INVENTORY</div></div>
+      <div class="project-info"><div class="project-meta">07 <span>DESKTOP / CONSOLE</span></div><h3>Genius Books <span>↗</span></h3><p>A C++ console-based inventory and sales system with local file handling.</p><div class="tags"><span>C++</span><span>FILES</span><span>OOP</span></div><a class="project-visit" target="_blank" rel="noopener noreferrer" href="https://github.com/laseyae07-cmd/genius-books-management-system">VIEW REPOSITORY <span>↗</span></a></div>
+    </article>
+  </div>
+  <p class="work-footnote reveal">✳ VISUAL PREVIEWS ARE STYLIZED ILLUSTRATIONS OF PERSONAL PROJECTS, NOT SCREENSHOTS.</p>
+</section>
+<section class="about section-pad" id="about">
+  <div class="section-kicker reveal"><span>02 / ABOUT ME</span><span class="section-rule"></span> BEHIND THE PIXELS</div>
+  <div class="about-grid">
+    <div class="about-main reveal"><p class="big-quote">A LITTLE <em>curiosity,</em><br>A LOT OF <span>creating.</span></p><p class="about-lead">I'm a frontend-focused software developer who cares just as much about how something feels as how it functions.</p><p>I've completed the coursework for my Higher Diploma in Software Engineering at ICBT Kandy and am awaiting final results. I enjoy working with React, TypeScript, Figma, APIs, databases, and testing — finding creative ways to solve practical problems.</p><a href="Laseya_Ekanayake_CV.pdf" download class="text-link">MORE ABOUT ME / CV <span>↗</span></a></div>
+    <div class="about-side reveal">
+      <div class="portrait-card" aria-label="Photo of Laseya Ekanayake"><img src="images/profile.jpg" loading="lazy" alt="Laseya Ekanayake portrait"/><span class="portrait-tag">HELLO WORLD! ✳</span></div>
+      <div class="about-facts"><span>BASED IN <b>SRI LANKA</b></span><span>FOCUS <b>FRONTEND + UI/UX</b></span><span>MINDSET <b>DESIGN. BUILD. REFINE.</b></span></div>
+    </div>
+  </div>
+</section>
+<section class="capabilities section-pad" aria-label="Skills">
+  <div class="section-kicker reveal"><span>03 / CAPABILITIES</span><span class="section-rule"></span> THE TOOLBOX</div>
+  <h2 class="capabilities-title reveal">TOOLS ARE NICE.<br><em>IDEAS MATTER MORE.</em></h2>
+  <div class="cap-grid">
+    <div class="cap-card reveal"><span class="cap-num">/01</span><div class="cap-graphic">⌘</div><h3>DESIGN</h3><p>Figma, visual hierarchy, responsive layouts, wireframing, design documentation.</p><div class="cap-rule"></div><small>MAKE IT MEANINGFUL</small></div>
+    <div class="cap-card reveal"><span class="cap-num">/02</span><div class="cap-graphic">⌁</div><h3>FRONTEND</h3><p>React, TypeScript, JavaScript, HTML, CSS, responsive interactions.</p><div class="cap-rule"></div><small>MAKE IT FEEL ALIVE</small></div>
+    <div class="cap-card reveal"><span class="cap-num">/03</span><div class="cap-graphic">◈</div><h3>ENGINEERING</h3><p>Node.js, Express, PHP, C#, Java, SQL, APIs, testing and debugging.</p><div class="cap-rule"></div><small>MAKE IT WORK</small></div>
+  </div>
+</section>
+<section class="playground section-pad" id="playground">
+  <div class="section-kicker reveal"><span>04 / PLAYGROUND</span><span class="section-rule"></span> THIS WEBSITE IS PART OF THE WORK</div>
+  <div class="playground-grid">
+    <div class="playground-intro reveal"><h2>DON'T JUST <em>LOOK.</em><br>PLAY A LITTLE.</h2><p>Good experiences invite curiosity. Try changing the accent, moving your cursor around the hero, or exploring the project cards.</p><div class="playground-hint">YOUR CHOICE, YOUR VIBE <span>↘</span></div></div>
+    <div class="control-panel reveal">
+      <div class="panel-head"><span>✳ INTERACTIVE LAB</span><span>LIVE / 001</span></div>
+      <div class="panel-preview"><div class="preview-rings"><i></i><i></i><i></i></div><strong>MAKE<br>IT <em>YOURS.</em></strong><span>CREATIVITY HAS NO DEFAULT.</span></div>
+      <fieldset class="color-switch"><legend>01 / CHOOSE THE ACCENT</legend><div class="swatch-row"><button type="button" class="swatch" data-theme="lime" aria-label="Lime accent" aria-pressed="true"><span style="--swatch:#d9ff70"></span><small>LIME</small></button><button type="button" class="swatch" data-theme="violet" aria-label="Violet accent" aria-pressed="false"><span style="--swatch:#bb9bff"></span><small>VIOLET</small></button><button type="button" class="swatch" data-theme="coral" aria-label="Coral accent" aria-pressed="false"><span style="--swatch:#ff957b"></span><small>CORAL</small></button></div></fieldset>
+      <div class="motion-setting"><span>02 / MOTION EFFECTS</span><button type="button" id="motion-toggle" class="switch" role="switch" aria-checked="true" aria-label="Enable or disable animations"><i></i><span>ON</span></button></div>
+    </div>
+  </div>
+</section>
+<section class="contact section-pad" id="contact">
+  <div class="contact-glow" aria-hidden="true"></div>
+  <div class="section-kicker reveal"><span>05 / CONTACT</span><span class="section-rule"></span> WHAT'S NEXT?</div>
+  <div class="contact-content reveal"><p class="contact-overline">HAVE A PROJECT, IDEA, OR OPPORTUNITY?</p><h2>LET'S MAKE<br><em>IT HAPPEN<span>↗</span></em></h2><p>Open to junior and internship opportunities in frontend development, UI/UX, and software engineering.</p><a class="contact-email magnetic" href="mailto:laseyae07@gmail.com?subject=Portfolio%20Inquiry">laseyae07@gmail.com <span>↗</span></a></div>
+  <div class="contact-bottom"><a href="https://github.com/laseyae07-cmd" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/in/laseya-ekanayake-956b25394/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a><a href="#home">BACK TO TOP ↑</a></div>
+</section>
+</main>
+<footer><span>© <span id="year">2026</span> LASEYA EKANAYAKE</span><span>DESIGNED WITH CURIOSITY. BUILT WITH CARE.</span><span>✳ ALWAYS EVOLVING</span></footer>
 </body>
 </html>
