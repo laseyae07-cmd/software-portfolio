@@ -883,3 +883,22 @@ td {
         transform: none;
     }
 }
+
+/* PAWTRACE personal Figma UI/UX design study */
+.project-image.figma-pawtrace {
+  color: #f3f3ed;
+  background: radial-gradient(circle at 83% 26%,rgba(201,250,103,.21),transparent 30%), linear-gradient(135deg,#090b0b,#17231c);
+  border-bottom: 1px solid rgba(201,250,103,.22);
+}
+.project-image.figma-pawtrace::after {
+  background: rgba(201,250,103,.25);
+}
+.project-image.figma-pawtrace span {
+  color: #c9fa67;
+  text-shadow: 0 2px 14px rgba(0,0,0,.5);
+}
+.project-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
