@@ -6,7 +6,6 @@
   display: block;
   overflow: visible;
   color: var(--text);
-  -webkit-text-fill-color: currentColor;
   background: none;
   letter-spacing: -.078em;
 }
@@ -146,6 +145,7 @@
 .project-card:hover .project-monogram {transform: translateY(-14px) rotate(-7deg);}
 
 /* Hover/focus micro-interactions */
+.nav-links a.nav-contact.motion-magnetic {display:inline-flex;align-items:center;justify-content:center;}
 .motion-magnetic {
   --magnet-x: 0px;
   --magnet-y: 0px;
@@ -250,11 +250,15 @@
   50% {opacity:.55}
   100% {transform:rotate(360deg);opacity:.9}
 }
+@media (max-width: 900px) {
+  .nav-links a.nav-contact.motion-magnetic {display:flex;width:100%;}
+}
 @media (max-width: 1000px) {
   .floating-chip-a {left: 0;}
   .floating-chip-b {right: -1%;}
 }
 @media (max-width: 650px) {
+  .hero h1 {font-size: clamp(43px, 11vw, 70px);}
   .skill-marquee {padding: 15px 0;}
   .skill-marquee-track > span {font-size: 15px;padding-right:25px;}
   .skill-marquee-track i {margin:0 7px;}
