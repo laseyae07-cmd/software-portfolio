@@ -1,0 +1,297 @@
+/* Motion layer for the creative portfolio.
+   Motion is progressive enhancement; interaction never depends on animation. */
+
+/* Animated headline — preserve the original readable text and hierarchy */
+.hero h1 > .hero-title-line {
+  display: block;
+  overflow: visible;
+  color: var(--text);
+  background: none;
+  letter-spacing: -.078em;
+}
+.hero h1 > .hero-title-line .hero-highlight {
+  color: var(--accent);
+}
+.hero h1 > .hero-title-line .hero-code {
+  color: var(--accent-two);
+}
+.hero-label {
+  width: fit-content;
+}
+.hero .hero-actions .motion-magnetic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-cue {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 14px;
+  margin-top: 44px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #9e9bae;
+  letter-spacing: .18em;
+}
+.scroll-cue i {
+  display: block;
+  width: 58px;
+  height: 1px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(213,255,145,.19);
+}
+.scroll-cue i::after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--accent-two);
+}
+.hero-right {
+  isolation: isolate;
+}
+.floating-chip {
+  position: absolute;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 17px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 13px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  color: #f5f3ff;
+  background: rgba(32,30,43,.94);
+  box-shadow: 0 14px 30px rgba(0,0,0,.3);
+  pointer-events: none;
+}
+.floating-chip > span {color: var(--accent-two);font-size: 18px;}
+.floating-chip-a {top: 9%;left: -8%;}
+.floating-chip-b {right: -6%;bottom: 13%;}
+.floating-chip-b > span {color: var(--accent);font-size: 15px;}
+.profile-card .profile-photo-wrap {
+  transform: translate3d(var(--photo-x, 0px),var(--photo-y, 0px),0);
+  transition: transform 340ms cubic-bezier(.2,.7,.25,1);
+}
+
+/* Moving disciplines ribbon */
+.skill-marquee {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid rgba(213,255,145,.24);
+  border-bottom: 1px solid rgba(213,255,145,.24);
+  background: #d5ff91;
+  color: #171820;
+  padding: 19px 0;
+  user-select: none;
+}
+.skill-marquee-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  white-space: nowrap;
+}
+.skill-marquee-track > span {
+  flex: 0 0 auto;
+  padding-right: 45px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(14px, 2vw, 21px);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -.025em;
+}
+.skill-marquee-track i {
+  font-style: normal;
+  display: inline-block;
+  margin: 0 15px;
+  color: #4b6035;
+}
+
+/* Interactive work gallery */
+.project-card {position: relative;isolation: isolate;}
+.project-card::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  background: radial-gradient(
+    380px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(185,163,255,.15),
+    transparent 70%
+  );
+  transition: opacity 320ms ease;
+}
+.project-card:hover::before {opacity: 1;}
+.project-card .project-content,
+.project-card .project-image {position: relative; z-index: 1;}
+.project-card .project-link {position: relative; z-index: 3;}
+.project-image {transition: filter 380ms ease;}
+.project-card:hover .project-image {filter: brightness(1.12);}
+.project-image .mini-design {
+  transition: transform 500ms cubic-bezier(.2,.75,.2,1);
+  transform-origin: center;
+}
+.project-card:hover .project-image .mini-design {transform: translateY(-8px) rotate(0deg);}
+.project-monogram {transition: transform 600ms cubic-bezier(.2,.75,.2,1);}
+.project-card:hover .project-monogram {transform: translateY(-14px) rotate(-7deg);}
+
+/* Hover/focus micro-interactions */
+.nav-links a.nav-contact.motion-magnetic {display:inline-flex;align-items:center;justify-content:center;}
+.motion-magnetic {
+  --magnet-x: 0px;
+  --magnet-y: 0px;
+  transform: translate3d(var(--magnet-x),var(--magnet-y),0);
+  transition: transform 270ms cubic-bezier(.18,.8,.3,1),box-shadow 260ms ease;
+}
+.motion-magnetic:hover {transform: translate3d(var(--magnet-x),calc(var(--magnet-y) - 3px),0);}
+.motion-magnetic:focus-visible {transform: none;}
+.filter-btn {position: relative;overflow: hidden;}
+.filter-btn::after {
+  content:"";
+  position: absolute;
+  inset: auto 17px 8px;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: center;
+  background: currentColor;
+  transition: transform 240ms ease;
+  opacity: .7;
+}
+.filter-btn:hover::after,
+.filter-btn:focus-visible::after {transform: scaleX(1);}
+.section-title em {
+  background-image: linear-gradient(90deg,rgba(185,163,255,.20),rgba(213,255,145,.18));
+  background-position: 0 95%;
+  background-size: 0% .32em;
+  background-repeat: no-repeat;
+}
+.section-title.active em {background-size: 100% .32em;}
+.section-title em {transition: background-size 650ms ease 170ms;}
+
+/* Cursor aura: presentation only, never replaces the normal pointer */
+.motion-cursor-glow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle,rgba(183,157,255,.18) 0%,rgba(183,157,255,.07) 38%,transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(-500px,-500px,0);
+  transition: opacity 250ms ease;
+  will-change: transform;
+}
+
+/* Layer of playful, low-cost animations */
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1 > .hero-title-line {
+    animation: headlineEnter 900ms cubic-bezier(.19,1,.22,1) backwards;
+  }
+  .hero h1 > .hero-title-line:nth-child(2) {animation-delay: 165ms;}
+  .hero-label {animation: headlineEnter 790ms 130ms backwards;}
+  .hero .hero-actions {animation: fadeRise 900ms 400ms backwards;}
+  .scroll-cue {animation: fadeRise 800ms 700ms backwards;}
+  .scroll-cue i::after {animation: cueTravel 2.5s ease-in-out infinite;}
+  .hero-right::after {animation: slowTwinkle 13s linear infinite;}
+  .floating-chip-a {animation: chipDriftA 5.5s ease-in-out infinite;}
+  .floating-chip-b {animation: chipDriftB 6.2s ease-in-out infinite reverse;}
+  .skill-marquee-track {animation: marqueeTravel 34s linear infinite;}
+  .skill-marquee:hover .skill-marquee-track {animation-play-state: paused;}
+  .project-card.reveal {
+    transition-property: opacity, transform, border-color, background-color;
+    transition-duration: 680ms, 720ms, 320ms, 320ms;
+    transition-timing-function: ease, cubic-bezier(.2,.75,.2,1), ease, ease;
+    transition-delay: var(--stagger-delay,0ms),var(--stagger-delay,0ms),0ms,0ms;
+  }
+  .project-card.reveal:not(.active) {transform: translateY(55px) scale(.975);}
+  .project-card.reveal.active {transform: translateY(0) scale(1);}
+  .project-card.reveal.active:hover {transform: translateY(-7px) scale(1);}
+  .approach-card.reveal.active {animation: fadeRise 700ms both;}
+  .approach-card.reveal.active:nth-child(2) {animation-delay:110ms;}
+  .approach-card.reveal.active:nth-child(3) {animation-delay:220ms;}
+}
+@keyframes headlineEnter {
+  from {opacity: 0;transform: translate3d(0,44px,0);filter: blur(3px);}
+  to {opacity: 1;transform: translate3d(0,0,0);filter: blur(0);}
+}
+@keyframes fadeRise {
+  from {opacity:0;transform:translate3d(0,18px,0);}
+  to {opacity:1;transform:translate3d(0,0,0);}
+}
+@keyframes cueTravel {
+  0%, 100% {transform: translateX(-27px);}
+  55% {transform: translateX(63px);}
+}
+@keyframes marqueeTravel {
+  to {transform: translate3d(-50%,0,0);}
+}
+@keyframes chipDriftA {
+  0%,100% {transform: translate3d(0,0,0) rotate(-6deg);}
+  50% {transform: translate3d(4px,-13px,0) rotate(-2deg);}
+}
+@keyframes chipDriftB {
+  0%,100% {transform: translate3d(0,0,0) rotate(5deg);}
+  50% {transform: translate3d(-5px,13px,0) rotate(1deg);}
+}
+@keyframes slowTwinkle {
+  0% {transform:rotate(0deg);opacity:.9}
+  50% {opacity:.55}
+  100% {transform:rotate(360deg);opacity:.9}
+}
+@media (max-width: 900px) {
+  .nav-links a.nav-contact.motion-magnetic {display:flex;width:100%;}
+}
+@media (max-width: 1000px) {
+  .floating-chip-a {left: 0;}
+  .floating-chip-b {right: -1%;}
+}
+@media (max-width: 650px) {
+  .hero h1 {font-size: clamp(43px, 11vw, 70px);}
+  .skill-marquee {padding: 15px 0;}
+  .skill-marquee-track > span {font-size: 15px;padding-right:25px;}
+  .skill-marquee-track i {margin:0 7px;}
+  .floating-chip {font-size: 10px;padding: 10px 12px;}
+  .floating-chip-a {left:-2%;top:10%;}
+  .floating-chip-b {right:-3%;bottom:11%;}
+  .scroll-cue {margin-top:30px;}
+  .hero h1 > .hero-title-line {letter-spacing: -.082em;}
+}
+@media (hover: none), (pointer: coarse) {
+  .motion-cursor-glow {display:none;}
+  .project-card::before {display:none;}
+}
+/* Respect OS motion preferences regardless of later style rules */
+@media (prefers-reduced-motion:reduce) {
+  .hero h1 > .hero-title-line,
+  .hero-label,
+  .hero .hero-actions,
+  .scroll-cue,
+  .floating-chip-a,
+  .floating-chip-b,
+  .hero-right::after,
+  .skill-marquee-track,
+  .approach-card,
+  .project-card {
+    animation: none !important;
+    transition-delay: 0ms !important;
+  }
+  .hero h1 > .hero-title-line {opacity: 1;filter:none;transform:none;}
+  .scroll-cue i::after {animation:none !important;}
+  .skill-marquee-track {transform:none !important;}
+  .motion-cursor-glow {display:none !important;}
+  .profile-card .profile-photo-wrap {transform:none !important;}
+  .project-card.reveal:not(.active) {opacity:1;transform:none;}
+  .section-title em {background-size:100% .32em;transition:none;}
+}
